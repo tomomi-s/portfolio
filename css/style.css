@@ -19,7 +19,6 @@ body {
 #main {
   margin-left: 150px;
   margin-right: 150px;
-  float: left;
   width: 900px; }
 
 #mainmenu {
@@ -47,7 +46,12 @@ body {
 #contacticon {
   position: fixed;
   width: 150px;
-  float: left; }
+  position: static;
+  float: right; }
+
+#contacticon > div {
+  position: fixed;
+  padding-left: 60px; }
 
 #contacticon a {
   display: block;
@@ -179,6 +183,15 @@ label {
   font-size: 16px;
   white-space: nowrap;
   line-height: 50px; }
+
+.mainpic {
+  width: 900px;
+  margin: auto;
+  position: relative;
+  width: 600px; }
+
+.detail {
+  margin-top: 50px; }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {

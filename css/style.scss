@@ -22,6 +22,12 @@ font: {
   width: $width;
 }
 
+@mixin centeringcontents($display:flex, $justify-content:space-between){
+  display:$display;
+  justify-content: $justify-content;
+}
+
+
 
 * {box-sizing:border-box}
 
@@ -44,7 +50,6 @@ body {
 #main{
  margin-left:150px;
  margin-right:150px;
- float: left;
  width: 900px;
 } 
 
@@ -73,7 +78,13 @@ body {
 
 #contacticon {
  @include stickynav;
- float: left;
+ position: static;
+ float: right;
+}
+
+#contacticon > div {
+  position: fixed;
+  padding-left: 60px;
 }
 
 #contacticon a{
@@ -162,8 +173,7 @@ body {
 }
 
 .work, .skill{
-  display:flex;
-  justify-content: space-between;
+@include centeringcontents
 }
 
 .works {
@@ -227,7 +237,21 @@ label {
   line-height: 50px;
 }
 
+// for works //
+.mainpic {
+  @include mainstructure;
+  width: 600px;
+}
+
+.detail {
+  margin-top: 50px;
+}
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+
+
+
